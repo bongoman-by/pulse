@@ -1,11 +1,25 @@
 @mixin flex-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
 @mixin flex-column {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+/// Примесь, которая выводит шрифт
+/// @access public
+/// @author bongoman-by
+/// @param {String} $size
+/// @param {Number} $weight
+/// @param {String} $style
+/// @param {String} $color
+@mixin font($size, $weight: 500, $style: normal, $color: $text-color, $transform: uppercase) {
+  font-size: $size;
+  font-style: $style;
+  font-weight: $weight;
+  color: $color;
+  text-transform: $transform;
+}
