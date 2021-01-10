@@ -1,4 +1,6 @@
-@import "variables";
+@import "base/variables";
+@import "base/mixins";
+
 * {
 	font-family: 'Museo Sans Cyrl', sans-serif
 }
@@ -8,6 +10,7 @@
 	margin: 0 auto;
 }
 
-@import "mixins";
-@import "general";
-@import "media";
+@import "blocks/promo";
+@import "blocks/header";
+@import "blocks/buttons";
+
