@@ -5,6 +5,9 @@
         img {
             width: 100%;
         }
+        @include media-tablet {
+            padding-left: 12px;
+        }
     }
     &__official {
         @include font(12px);
@@ -13,6 +16,9 @@
             display: block;
             font-size: 18px;
             font-weight: 700;
+        }
+        @include media-tablet {
+            display: none;
         }
     }
     &__phone {
@@ -23,7 +29,19 @@
             text-decoration: none;
         }
     }
-    &_contacts {
+    &__contacts {
         @include flex-column;
+        @include media-tablet {
+            padding-right: 12px;
+        }
+        @include media-mobile {
+            align-items: center;
+            margin-top: 12px;
+        }
     }
+    @include media-mobile {
+        @include flex-column;
+        align-items: center;
+    }
+
 }
