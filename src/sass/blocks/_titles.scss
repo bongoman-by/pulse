@@ -1,0 +1,14 @@
+.title {
+    @include font(30px, 700, bold, #0d0d0d);
+    text-align: center;
+    &_left {
+      @include font(36px, 700, bold);
+        text-align: left;
+        @include media-tablet {
+          text-align: center;
+        }
+    }
+    @include media-mobile {
+      font-size: 20px;
+    }
+}
