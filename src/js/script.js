@@ -15,6 +15,8 @@ window.addEventListener("DOMContentLoaded", () => {
   //         ]
   //     });
 
+  new WOW().init();
+
   const slider = tns({
     container: ".carousel__inner",
     items: 1,
@@ -89,6 +91,7 @@ window.addEventListener("DOMContentLoaded", () => {
       items.forEach((item) => {
         item.addEventListener("click", (event) => {
           const target = event.target;
+          console.log(target.closest("div"));
           if (target) {
             if (
               target
@@ -106,11 +109,11 @@ window.addEventListener("DOMContentLoaded", () => {
               });
             } else if (
               target
-                .closest("ul")
+                .closest("div")
                 .classList.contains("catalog-item__list_active")
             ) {
               itemsList.forEach((itemList, i) => {
-                if (target.closest("ul") === itemList) {
+                if (target.closest("div") === itemList) {
                   select(i, itemsList, itemsContent, [
                     "catalog-item__list_active",
                     "catalog-item__content_active",
@@ -215,7 +218,7 @@ window.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  $("a[href^='#']").click(function () {
+  $("a[href^='#up']").click(function () {
     const _href = $(this).attr("href");
     $("html, body").animate({ scrollTop: $(_href).offset().top + "px" });
     return false;

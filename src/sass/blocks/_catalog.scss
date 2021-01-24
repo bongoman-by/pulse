@@ -71,6 +71,7 @@
       text-decoration: none;
     }
     &__descr {
+      padding: 0 20px;
       margin-top: 16px;
       @include font(14px, 300, normal, #0d0d0d, none);
       text-align: center;
@@ -118,6 +119,7 @@
     }
     &__list {
       position: relative;
+      display: flex;
       width: 50%;
       margin-left: 0px;
       transition: 0.5s all;
@@ -130,6 +132,9 @@
         transform: translateX(-100%);
         margin-left: 20px;
       }
+    }
+    ul {
+      padding-left: 0;
     }
     li {
       position: relative;
@@ -149,11 +154,11 @@
     }
     &__back {
       position: absolute;
-      bottom: 0;
+      bottom: -15px;
       left: 50%;
       transform: translateX(calc(-50% - 19px));
       display: block;
-      @include font(14px, 500, bold, $main-color);
+      @include font(14px, 500, normal, $main-color);
       text-decoration: underline;
       &:hover {
         color: $main-color;
