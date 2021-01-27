@@ -27,6 +27,7 @@
       @include media-mobile {
         @include font(14px, 300, normal, #0d0d0d);
         margin: 0 auto;
+        margin-top: 10px;
       }
     }
     a {

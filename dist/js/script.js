@@ -191,7 +191,7 @@ window.addEventListener("DOMContentLoaded", () => {
   validateForms("#consultation form");
   validateForms("#consultation-form");
 
-  $("input[name=phone]").mask("+375 (99) 9999999");
+  $("input[name=phone]").mask("+7 (999) 999-9999");
 
   $("form").submit(function (e) {
     e.preventDefault();
